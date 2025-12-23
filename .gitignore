@@ -11,3 +11,5 @@ Thumbs.db
 
 # Large or optional data (필요시)
 # data/*.csv
+# generated outputs
+outputs/
