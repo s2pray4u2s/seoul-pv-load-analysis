@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_79600c445d3bf9311e8b7db25743d41d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_79600c445d3bf9311e8b7db25743d41d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_79600c445d3bf9311e8b7db25743d41d = L.map(
+                "map_79600c445d3bf9311e8b7db25743d41d",
+                {
+                    center: [36.5, 127.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e20859f030b8d0d64c36ab1db7d45229 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e20859f030b8d0d64c36ab1db7d45229.addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_e4a8f128589457c23f2968678353bfdb = L.marker(
+                [35.1796, 129.0756],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_3e230c3512cd5e0adcfd647c7b9c7554 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12ec3f447433e7dbaca175d5794e6970 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e5eb214c0ceb71782244ee2375ca210 = $(`<div id="html_9e5eb214c0ceb71782244ee2375ca210" style="width: 100.0%; height: 100.0%;"><b>부산</b><br>ESS 최적 후보지</div>`)[0];
+                popup_12ec3f447433e7dbaca175d5794e6970.setContent(html_9e5eb214c0ceb71782244ee2375ca210);
+            
+        
+
+        marker_e4a8f128589457c23f2968678353bfdb.bindPopup(popup_12ec3f447433e7dbaca175d5794e6970)
+        ;
+
+        
+    
+    
+            marker_e4a8f128589457c23f2968678353bfdb.bindTooltip(
+                `<div>
+                     부산
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4a8f128589457c23f2968678353bfdb.setIcon(icon_3e230c3512cd5e0adcfd647c7b9c7554);
+            
+    
+            var circle_ac61d3b6e634fa25d2362b2a3e49a47a = L.circle(
+                [35.1796, 129.0756],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_ff57b6d262d52b9a2634a9e34a6c9cbf = L.marker(
+                [34.7604, 127.6622],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_0b3b8675064edf32261418ecd0024f37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d8275603d22abd23f800444edc6553b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_471459a0b1229fe32f962b3fdc80afc5 = $(`<div id="html_471459a0b1229fe32f962b3fdc80afc5" style="width: 100.0%; height: 100.0%;"><b>여수</b><br>ESS 최적 후보지</div>`)[0];
+                popup_3d8275603d22abd23f800444edc6553b.setContent(html_471459a0b1229fe32f962b3fdc80afc5);
+            
+        
+
+        marker_ff57b6d262d52b9a2634a9e34a6c9cbf.bindPopup(popup_3d8275603d22abd23f800444edc6553b)
+        ;
+
+        
+    
+    
+            marker_ff57b6d262d52b9a2634a9e34a6c9cbf.bindTooltip(
+                `<div>
+                     여수
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ff57b6d262d52b9a2634a9e34a6c9cbf.setIcon(icon_0b3b8675064edf32261418ecd0024f37);
+            
+    
+            var circle_08f6eb38dbbc28a90a9d9218cffab636 = L.circle(
+                [34.7604, 127.6622],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_3d90b631bfc902804ab6512554c566cf = L.marker(
+                [37.9465, 124.63],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_c37b94e7097dcfdfd5d11c5a7d9936e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46d7dc7b4a93a179427b71db7f995b7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34fb67854c9642e35bfcbeae66ae6bdc = $(`<div id="html_34fb67854c9642e35bfcbeae66ae6bdc" style="width: 100.0%; height: 100.0%;"><b>백령도</b><br>ESS 최적 후보지</div>`)[0];
+                popup_46d7dc7b4a93a179427b71db7f995b7e.setContent(html_34fb67854c9642e35bfcbeae66ae6bdc);
+            
+        
+
+        marker_3d90b631bfc902804ab6512554c566cf.bindPopup(popup_46d7dc7b4a93a179427b71db7f995b7e)
+        ;
+
+        
+    
+    
+            marker_3d90b631bfc902804ab6512554c566cf.bindTooltip(
+                `<div>
+                     백령도
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d90b631bfc902804ab6512554c566cf.setIcon(icon_c37b94e7097dcfdfd5d11c5a7d9936e1);
+            
+    
+            var circle_76663a4f89a551ce5979b784fee513a4 = L.circle(
+                [37.9465, 124.63],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_3f990eaa00f8e1ee96bb89235eb9c3d6 = L.marker(
+                [34.7701, 127.0797],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_99ba4e046514835ad5a87a1201bb01d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e35f52ed8a579571d284c06fe751571 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c45e79f1ab3be29613e7c3781a491bf = $(`<div id="html_1c45e79f1ab3be29613e7c3781a491bf" style="width: 100.0%; height: 100.0%;"><b>보성군</b><br>ESS 최적 후보지</div>`)[0];
+                popup_0e35f52ed8a579571d284c06fe751571.setContent(html_1c45e79f1ab3be29613e7c3781a491bf);
+            
+        
+
+        marker_3f990eaa00f8e1ee96bb89235eb9c3d6.bindPopup(popup_0e35f52ed8a579571d284c06fe751571)
+        ;
+
+        
+    
+    
+            marker_3f990eaa00f8e1ee96bb89235eb9c3d6.bindTooltip(
+                `<div>
+                     보성군
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f990eaa00f8e1ee96bb89235eb9c3d6.setIcon(icon_99ba4e046514835ad5a87a1201bb01d3);
+            
+    
+            var circle_989b6fb9be393fc7272c53232cca10df = L.circle(
+                [34.7701, 127.0797],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_cb3e6447819ae8087b4c10ce3c59c85f = L.marker(
+                [35.3221, 128.2612],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_fe2c85ec2b88326dcb31bd799db33fcf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46bcf83e9567d767b5adaee7958885ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b606a0e97de945176862441a9a13c0a = $(`<div id="html_0b606a0e97de945176862441a9a13c0a" style="width: 100.0%; height: 100.0%;"><b>의령군</b><br>ESS 최적 후보지</div>`)[0];
+                popup_46bcf83e9567d767b5adaee7958885ab.setContent(html_0b606a0e97de945176862441a9a13c0a);
+            
+        
+
+        marker_cb3e6447819ae8087b4c10ce3c59c85f.bindPopup(popup_46bcf83e9567d767b5adaee7958885ab)
+        ;
+
+        
+    
+    
+            marker_cb3e6447819ae8087b4c10ce3c59c85f.bindTooltip(
+                `<div>
+                     의령군
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb3e6447819ae8087b4c10ce3c59c85f.setIcon(icon_fe2c85ec2b88326dcb31bd799db33fcf);
+            
+    
+            var circle_3ad8618ddac2af8763abbb2cb181c11d = L.circle(
+                [35.3221, 128.2612],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_91613ad81787527c39cb90d6a471a356 = L.marker(
+                [35.1795, 128.1076],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_87ea36286ea10cd96226448d12824b65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64d144f784d4fd0f8b718b4c37013fca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_929e981f96f900efe45c3b8420fd3c60 = $(`<div id="html_929e981f96f900efe45c3b8420fd3c60" style="width: 100.0%; height: 100.0%;"><b>진주</b><br>ESS 최적 후보지</div>`)[0];
+                popup_64d144f784d4fd0f8b718b4c37013fca.setContent(html_929e981f96f900efe45c3b8420fd3c60);
+            
+        
+
+        marker_91613ad81787527c39cb90d6a471a356.bindPopup(popup_64d144f784d4fd0f8b718b4c37013fca)
+        ;
+
+        
+    
+    
+            marker_91613ad81787527c39cb90d6a471a356.bindTooltip(
+                `<div>
+                     진주
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_91613ad81787527c39cb90d6a471a356.setIcon(icon_87ea36286ea10cd96226448d12824b65);
+            
+    
+            var circle_daa5f515a558f053837932617e68a4e8 = L.circle(
+                [35.1795, 128.1076],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_e22f0c3f9e0a33938d29a39f1cc13c07 = L.marker(
+                [36.5684, 128.7294],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_a2f166079c51aebcac46ea92b4309d94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca908f5f40cb2278fa0729cf529574a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7e1f042aa14dbcbe15e4182405df4d3 = $(`<div id="html_d7e1f042aa14dbcbe15e4182405df4d3" style="width: 100.0%; height: 100.0%;"><b>안동</b><br>ESS 최적 후보지</div>`)[0];
+                popup_ca908f5f40cb2278fa0729cf529574a1.setContent(html_d7e1f042aa14dbcbe15e4182405df4d3);
+            
+        
+
+        marker_e22f0c3f9e0a33938d29a39f1cc13c07.bindPopup(popup_ca908f5f40cb2278fa0729cf529574a1)
+        ;
+
+        
+    
+    
+            marker_e22f0c3f9e0a33938d29a39f1cc13c07.bindTooltip(
+                `<div>
+                     안동
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e22f0c3f9e0a33938d29a39f1cc13c07.setIcon(icon_a2f166079c51aebcac46ea92b4309d94);
+            
+    
+            var circle_299a9e40f54bc4efada0cd003907859b = L.circle(
+                [36.5684, 128.7294],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_e063827f7531b0803e06efec0d1a1b1d = L.marker(
+                [35.5205, 127.7252],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_38f04c0459aaa49f28e51f1ff0767e95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb939779dcbafc6a32fde7e5ab747017 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37baafd78d878db6e578ac9863e9a478 = $(`<div id="html_37baafd78d878db6e578ac9863e9a478" style="width: 100.0%; height: 100.0%;"><b>함양군</b><br>ESS 최적 후보지</div>`)[0];
+                popup_fb939779dcbafc6a32fde7e5ab747017.setContent(html_37baafd78d878db6e578ac9863e9a478);
+            
+        
+
+        marker_e063827f7531b0803e06efec0d1a1b1d.bindPopup(popup_fb939779dcbafc6a32fde7e5ab747017)
+        ;
+
+        
+    
+    
+            marker_e063827f7531b0803e06efec0d1a1b1d.bindTooltip(
+                `<div>
+                     함양군
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e063827f7531b0803e06efec0d1a1b1d.setIcon(icon_38f04c0459aaa49f28e51f1ff0767e95);
+            
+    
+            var circle_1758b23f1567fad4d653c8d2f091a4d0 = L.circle(
+                [35.5205, 127.7252],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_ea14c9f84a88b0067160cb8951a4fa07 = L.marker(
+                [36.4355, 129.0573],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_b7fa3cbd967bbe7d442a589010a2005e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62c4b141cf72f85325bebac528e80e85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_531af4ba2c5261b2d8eef507030901b7 = $(`<div id="html_531af4ba2c5261b2d8eef507030901b7" style="width: 100.0%; height: 100.0%;"><b>청송군</b><br>ESS 최적 후보지</div>`)[0];
+                popup_62c4b141cf72f85325bebac528e80e85.setContent(html_531af4ba2c5261b2d8eef507030901b7);
+            
+        
+
+        marker_ea14c9f84a88b0067160cb8951a4fa07.bindPopup(popup_62c4b141cf72f85325bebac528e80e85)
+        ;
+
+        
+    
+    
+            marker_ea14c9f84a88b0067160cb8951a4fa07.bindTooltip(
+                `<div>
+                     청송군
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea14c9f84a88b0067160cb8951a4fa07.setIcon(icon_b7fa3cbd967bbe7d442a589010a2005e);
+            
+    
+            var circle_8d49ebd5a1803ff447260528aede5192 = L.circle(
+                [36.4355, 129.0573],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var marker_eba4638654618690aac333ef849b66ad = L.marker(
+                [34.8544, 128.4331],
+                {
+}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+    
+            var icon_c616f2709ae8fdd17f5a150b2ce3e2d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a860ec9d479124c817a936855e35ba1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6313727e19896d712912cff03d2e2862 = $(`<div id="html_6313727e19896d712912cff03d2e2862" style="width: 100.0%; height: 100.0%;"><b>통영</b><br>ESS 최적 후보지</div>`)[0];
+                popup_a860ec9d479124c817a936855e35ba1e.setContent(html_6313727e19896d712912cff03d2e2862);
+            
+        
+
+        marker_eba4638654618690aac333ef849b66ad.bindPopup(popup_a860ec9d479124c817a936855e35ba1e)
+        ;
+
+        
+    
+    
+            marker_eba4638654618690aac333ef849b66ad.bindTooltip(
+                `<div>
+                     통영
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eba4638654618690aac333ef849b66ad.setIcon(icon_c616f2709ae8fdd17f5a150b2ce3e2d9);
+            
+    
+            var circle_89c3ab80bf769eb3e91eece245747a77 = L.circle(
+                [34.8544, 128.4331],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_79600c445d3bf9311e8b7db25743d41d);
+        
+</script>
+</html>

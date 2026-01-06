@@ -13,3 +13,13 @@ Thumbs.db
 # data/*.csv
 # generated outputs
 outputs/
+
+# ignore data & generated
+/data/
+*.csv
+/outputs/
+
+# ignore data & generated
+/data/
+*.csv
+/outputs/
