@@ -23,3 +23,8 @@ outputs/
 /data/
 *.csv
 /outputs/
+
+# Documents
+*.ppt
+*.pptx
+*.pdf
